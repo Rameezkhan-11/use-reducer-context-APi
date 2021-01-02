@@ -1,10 +1,10 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext } from 'react';
 import Context from './Context';
-import Reduce from './Reduce';
+
 
 const Parent = () =>{
 let counter = useContext(Context)
-const [c, cR] = useReducer(Reduce,1)
+
 
 
 return(
@@ -16,9 +16,6 @@ return(
 <button onClick={()=>{counter[1]( ++counter[0] )}}>Increment</button>
 
 
-<h1>Reducer {c}</h1>
-
-<button onClick={()=>{cR('INCREMENT')}}>Click Reducer</button>
 
 </>
 )
